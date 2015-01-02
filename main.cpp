@@ -61,7 +61,7 @@ void quickSort( Node ** start, Node ** end){
 		Node * theOnePreviousToStart;
 		Node * theOneNextToEnd;
 		Node * temp;
-		while( p!= *end ){ // should be p is the end node not NULL....rectify this
+		while( p!= *end ){
 			if( p->getValue() < pivot->getValue() ){
 				temp = p;
 				p->getPrev()->setNext( p->getNext() );
@@ -93,7 +93,7 @@ void quickSort( Node ** start, Node ** end){
 				theOneNextToEnd->setPrev( p->getPrev() );
 			}
 			*end = p->getPrev();
-			
+
 			theOnePreviousToStart = (*start)->getPrev();
 
 			temp->setNext( *start );
